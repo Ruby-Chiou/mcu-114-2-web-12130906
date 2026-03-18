@@ -33,6 +33,13 @@ a:focus {
   text-decoration: none;
 }
 
+.card-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
 .card {
   border: solid 1px #999;
   border-radius: 8px;
