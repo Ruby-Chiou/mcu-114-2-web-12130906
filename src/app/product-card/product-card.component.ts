@@ -6,24 +6,24 @@ import { Component, EventEmitter, Input, Output, booleanAttribute, numberAttribu
   imports: [DatePipe, CurrencyPipe],
   templateUrl: './product-card.component.html',
   styleUrl: './product-card.component.scss',
-  host: { class: 'app-product-card' }
+  host: { class: 'app-product-card' },
 })
 export class ProductCardComponent {
   @Input({ required: true, transform: numberAttribute })
   id!: number;
-  
-  @Input() 
+
+  @Input()
   productName!: string;
 
   @Input()
-  author!: string;
+  authors!: string[];
 
   @Input()
   company!: string;
 
   @Input({ transform: booleanAttribute })
   isShow!: boolean;
-  
+
   @Output()
   isShowChange = new EventEmitter<boolean>();
 
@@ -32,11 +32,11 @@ export class ProductCardComponent {
 
   @Input()
   createDate!: Date;
-  
+
   @Input({ transform: numberAttribute })
   price!: number;
 
   protected onSetDisplay(isShow: boolean): void {
-     this.isShowChange.emit(isShow);
+    this.isShowChange.emit(isShow);
   }
 }
