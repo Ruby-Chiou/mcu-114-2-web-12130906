@@ -11,7 +11,7 @@ import { PaginationComponent } from '../pagination/pagination.component';
   templateUrl: './product-page.component.html',
   styleUrl: './product-page.component.scss',
 })
-export class ProductPageComponent implements OnInit {
+export class ProductPageComponent {
   private readonly router = inject(Router);
 
   private readonly productService = inject(ProductService);
@@ -30,9 +30,6 @@ export class ProductPageComponent implements OnInit {
       const pageSize = this.pageSize();
       this.getProducts(pageIndex, pageSize);
     });
-  }
-  ngOnInit(): void {
-    throw new Error('Method not implemented.');
   }
 
   protected onAdd(): void {
