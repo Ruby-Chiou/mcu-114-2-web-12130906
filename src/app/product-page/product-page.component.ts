@@ -61,8 +61,9 @@ export class ProductPageComponent {
   }
 
   private getProducts(pageIndex: number, pageSize: number): void {
-    const { data, count } = this.productService.getList(undefined, pageIndex, pageSize);
-    this.products.set(data);
-    this.totalCount.set(count);
+    this.productService.getList(undefined, pageIndex, pageSize).subscribe(({ data, count }) => {
+      this.products.set(data);
+      this.totalCount.set(count);
+    });
   }
 }
