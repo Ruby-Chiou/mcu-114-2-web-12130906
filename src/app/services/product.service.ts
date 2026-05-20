@@ -91,4 +91,8 @@ export class ProductService {
     const [product] = this._data.splice(index, 1);
     return of(product);
   }
+
+  update(product: Readonly<Product>): Observable<Product> {
+    throw new Error('Not implement');
+  }
 }

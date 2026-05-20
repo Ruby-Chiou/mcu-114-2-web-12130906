@@ -127,16 +127,17 @@
       "id": "KJc5i3RS6u4"
     },
     {
+      "id": "QdEkjtVMSTI",
       "name": "test",
       "company": "mcu",
       "authors": [
-        "A"
+        "A",
+        "B"
       ],
       "price": 1000,
       "isShow": true,
       "photoUrl": "https://api.fnkr.net/testimg/200x200/DDDDDD/999999/?text=img",
-      "createDate": "2026-05-20T09:45:23.182Z",
-      "id": "QdEkjtVMSTI"
+      "createDate": "2026-05-20T10:01:50.880Z"
     }
   ],
   "$schema": "./node_modules/json-server/schema.json"
